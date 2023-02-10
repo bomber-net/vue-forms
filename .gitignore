@@ -1,0 +1,8 @@
+/.idea/
+/app/
+/node_modules/
+/public/
+/favicon.ico
+/index.html
+/package-lock.json
+/vite.config.js
