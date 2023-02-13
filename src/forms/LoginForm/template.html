@@ -1,0 +1,8 @@
+<VueForm :action="url" method="post" :data="formData"
+	@begin="$emit ('begin')" @success="$emit ('success',$event)" @error="error" @end="$emit ('end')"
+	class="vue-login-form">
+	<VueFormInput v-model="formData.email" v-model:e="errors.email">email</VueFormInput>
+	<VueFormInput v-model="formData.password" v-model:e="errors.password" type="password">password</VueFormInput>
+	<VueFormCheck>remember</VueFormCheck>
+	<VueFormSubmit>LOGIN</VueFormSubmit>
+</VueForm>
