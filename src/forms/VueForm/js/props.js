@@ -1,7 +1,7 @@
 'use strict';
 export default (
 	{
-		action:String,
+		action:{type:String,default:''},
 		method:{type:String,default:'post'},
 		data:{type:Object,default:()=>({})},
 	});

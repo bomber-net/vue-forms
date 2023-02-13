@@ -2,7 +2,7 @@
 import wrapper from 'bomber-net-axios-wrapper';
 export default function ()
 	{
-		this.$emit ('start');
+		this.$emit ('begin');
 		let data=this.data;
 		let filesCount=0;
 		let formData=new FormData;
@@ -17,7 +17,7 @@ export default function ()
 			}
 		if (filesCount) data=formData;
 		let request=wrapper[this.method.toLowerCase ()==='put'?'put':'post'] (this.action,data);
-		request.success (response=>this.$emit ('success',response)).error (error=>this.$emit ('error',error));
+		request.success (response=>this.$emit ('success',response)).error (error=>this.$emit ('error',error)).response (()=>this.$emit ('end'));
 
 		function dotted (data,prefix=null)
 			{
