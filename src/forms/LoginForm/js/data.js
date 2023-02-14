@@ -7,7 +7,7 @@ export default function data ()
 					{
 						email:null,
 						password:null,
-						rememeber:false,
+						remember:this.remember,
 					},
 				errors:{},
 			});

@@ -1,8 +1,16 @@
 <VueForm :action="url" method="post" :data="formData"
 	@begin="$emit ('begin')" @success="$emit ('success',$event)" @error="error" @end="$emit ('end')"
 	class="vue-login-form">
-	<VueFormInput v-model="formData.email" v-model:e="errors.email">email</VueFormInput>
-	<VueFormInput v-model="formData.password" v-model:e="errors.password" type="password">password</VueFormInput>
-	<VueFormCheck>remember</VueFormCheck>
-	<VueFormSubmit>LOGIN</VueFormSubmit>
+	<VueFormInput v-model="formData.email" v-model:e="errors.email" hint="email">
+		<template v-if="$slots.email"><slot name="email"/></template>
+	</VueFormInput>
+	<VueFormInput v-model="formData.password" v-model:e="errors.password" hint="password" type="password">
+		<template v-if="$slots.password"><slot name="password"/></template>
+	</VueFormInput>
+	<VueFormCheck v-model="formData.remember" v-if="!noRemember">
+		<template v-if="$slots.remember"><slot name="remember"/></template>
+	</VueFormCheck>
+	<VueFormSubmit>
+		<template v-if="$slots.submit"><slot name="submit"/></template>
+	</VueFormSubmit>
 </VueForm>
