@@ -10,5 +10,13 @@ export default function data ()
 						remember:this.remember,
 					},
 				errors:{},
+				formEvents:
+					{
+						start:this.start,
+						success:this.success,
+						error:this.error,
+						end:this.end,
+						reset:this.reset,
+					},
 			});
 	}

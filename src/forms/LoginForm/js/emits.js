@@ -1,2 +1,2 @@
 'use strict';
-export default (['begin','success','end']);
+export default (['start','success','end']);

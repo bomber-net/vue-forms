@@ -1,7 +1,7 @@
 {
 	"name": "bomber-net-vue-forms",
 	"private": false,
-	"version": "2.3.0",
+	"version": "2.4.0",
 	"type": "module",
 	"dependencies": {
 		"@vitejs/plugin-vue": "^4.0.0",
@@ -62,6 +62,14 @@
 		"./forms/LoginForm": {
 			"import": "./src/forms/LoginForm/LoginForm.vue",
 			"require": "./src/forms/LoginForm/LoginForm.vue"
+		},
+		"./popups": {
+			"import": "./src/popups/popups.js",
+			"require": "./src/popups/popups.js"
+		},
+		"./popups/VuePopupHost": {
+			"import": "./src/popups/VuePopupHost/VuePopupHost.vue",
+			"require": "./src/popups/VuePopupHost/VuePopupHost.vue"
 		}
 	},
 	"repository": {

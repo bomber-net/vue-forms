@@ -1,18 +1,22 @@
 'use strict';
+import mixin      from '../../mixin/mixin.js';
 import props      from './js/props';
 import emits      from './js/emits';
 import data       from './js/data';
 import computed   from './js/computed';
 import methods    from './js/methods';
 import components from './js/components';
+import created    from './js/created';
 
 export default (
 	{
-		name:'LoginForm',
+		mixins:[mixin],
+		name:'VuePopupHost',
 		props,
 		emits,
 		data,
 		computed,
 		methods,
 		components,
+		created,
 	});

@@ -1,6 +1,4 @@
-<VueForm :action="url" method="post" :data="formData"
-	@begin="$emit ('begin')" @success="$emit ('success',$event)" @error="error" @end="$emit ('end')"
-	class="vue-login-form">
+<VueForm v-bind="formBind" v-on="formEvents" class="vue-login-form">
 	<slot name="before"/>
 	<VueFormInput v-model="formData.email" v-model:e="errors.email" hint="email">
 		<template v-if="$slots.email"><slot name="email"/></template>

@@ -1,8 +1,9 @@
 'use strict';
 import wrapper from 'bomber-net-axios-wrapper';
+
 export default function ()
 	{
-		this.$emit ('begin');
+		this.$emit ('start');
 		let data=this.data;
 		let filesCount=0;
 		let formData=new FormData;
