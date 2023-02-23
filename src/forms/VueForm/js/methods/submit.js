@@ -3,6 +3,7 @@ import wrapper from 'bomber-net-axios-wrapper';
 
 export default function ()
 	{
+		if (!this.action) return;
 		this.$emit ('start');
 		let data=this.data;
 		let filesCount=0;
