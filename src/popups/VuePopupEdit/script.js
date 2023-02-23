@@ -8,9 +8,9 @@ import components from './js/components';
 export default (
 	{
 		mixins:[mixin],
-		name:'VuePopupView',
+		name:'VuePopupEdit',
 		emits,
 		data,
 		methods,
-		components
+		components,
 	});

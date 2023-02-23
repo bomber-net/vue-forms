@@ -1,7 +1,7 @@
 {
 	"name": "bomber-net-vue-forms",
 	"private": false,
-	"version": "2.5.0",
+	"version": "2.6.0",
 	"type": "module",
 	"dependencies": {
 		"@vitejs/plugin-vue": "^4.0.0",
@@ -74,6 +74,10 @@
 		"./popups/VuePopupView": {
 			"import": "./src/popups/VuePopupView/VuePopupView.vue",
 			"require": "./src/popups/VuePopupView/VuePopupView.vue"
+		},
+		"./popups/VuePopupEdit": {
+			"import": "./src/popups/VuePopupEdit/VuePopupEdit.vue",
+			"require": "./src/popups/VuePopupEdit/VuePopupEdit.vue"
 		}
 	},
 	"repository": {

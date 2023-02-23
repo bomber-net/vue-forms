@@ -5,7 +5,9 @@
 			<div class="vue-popup-host-buttons vue-popup-host-buttons-before">
 				<button title="Close" type="reset" class="vue-popup-host-button-close"/>
 			</div>
-			<div class="vue-popup-host-content" v-bind="$attrs"><slot/></div>
+			<div class="vue-popup-host-content" v-bind="$attrs">
+				<slot/>
+			</div>
 			<div v-if="$slots.buttons" class="vue-popup-host-buttons vue-popup-host-buttons-after">
 				<slot name="buttons"/>
 			</div>

@@ -1,0 +1,4 @@
+<VuePopupHost v-on="hostEvents" v-bind="$attrs">
+	<div v-if="errorMessage" v-text="errorMessage" class="vue-popup-view-error"/>
+	<template v-if="!errorMessage" #default><slot/></template>
+</VuePopupHost>
