@@ -18,7 +18,10 @@ export default function ()
 				if (value!==null && typeof (value)==='object') filesCount++;
 			}
 		if (filesCount) data=formData;
-		let request=wrapper[this.method.toLowerCase ()==='put'?'put':'post'] (this.action,data);
+		let method=this.method.toLowerCase ();
+		if (!['get','post','put','delete'].includes (method)) method='post';
+		let props=['post','put'].includes (method)?[this.action,data]:[this.action];
+		let request=wrapper[method] (...props);
 		request.success (response=>this.$emit ('success',response)).error (error=>this.$emit ('error',error)).response (()=>this.$emit ('end'));
 
 		function dotted (data,prefix=null)

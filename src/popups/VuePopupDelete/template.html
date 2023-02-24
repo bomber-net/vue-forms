@@ -1,0 +1,10 @@
+<VuePopupHost v-on="hostEvents" v-bind="$attrs" method="delete">
+	<div v-if="errorMessage" v-text="errorMessage" class="vue-popup-delete-error"/>
+	<template v-if="!errorMessage" #default>
+		<slot/>
+	</template>
+	<template v-if="!errorMessage" #buttons>
+		<button type="submit" title="Delete" class="vue-popup-delete-button-delete"/>
+		<button type="reset" title="Cancel" class="vue-popup-delete-button-cancel"/>
+	</template>
+</VuePopupHost>
