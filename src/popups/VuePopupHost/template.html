@@ -1,6 +1,6 @@
 <teleport to="body">
 	<div class="vue-popup-host-container">
-		<div @click="$emit ('close')" class="vue-popup-host-splash"/>
+		<div @click="formReset" class="vue-popup-host-splash"/>
 		<VueForm v-bind="formBind" v-on="formEvents" class="vue-popup-host-form">
 			<div class="vue-popup-host-buttons vue-popup-host-buttons-before">
 				<button title="Close" type="reset" class="vue-popup-host-button-close"/>

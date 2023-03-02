@@ -1,12 +1,13 @@
 'use strict';
-import mixin      from '../../mixin/mixin.js';
-import props      from './js/props';
-import emits      from './js/emits';
-import data       from './js/data';
-import computed   from './js/computed';
-import methods    from './js/methods';
-import components from './js/components';
-import created    from './js/created';
+import mixin         from '../../mixin/mixin.js';
+import props         from './js/props';
+import emits         from './js/emits';
+import data          from './js/data';
+import computed      from './js/computed';
+import methods       from './js/methods';
+import components    from './js/components';
+import created       from './js/created';
+import beforeUnmount from './js/beforeUnmount';
 
 export default (
 	{
@@ -19,4 +20,5 @@ export default (
 		methods,
 		components,
 		created,
+		beforeUnmount,
 	});
