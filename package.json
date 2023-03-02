@@ -1,7 +1,7 @@
 {
 	"name": "bomber-net-vue-forms",
 	"private": false,
-	"version": "2.7.1",
+	"version": "2.8.0",
 	"type": "module",
 	"dependencies": {
 		"@vitejs/plugin-vue": "^4.0.0",
@@ -46,6 +46,10 @@
 		"./elements/VueFormRange": {
 			"import": "./src/elements/VueFormRange/VueFormRange.vue",
 			"require": "./src/elements/VueFormRange/VueFormRange.vue"
+		},
+		"./elements/VueFormFile": {
+			"import": "./src/elements/VueFormFile/VueFormFile.vue",
+			"require": "./src/elements/VueFormFile/VueFormFile.vue"
 		},
 		"./elements/VueFormSubmit": {
 			"import": "./src/elements/VueFormSubmit/VueFormSubmit.vue",

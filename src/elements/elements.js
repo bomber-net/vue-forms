@@ -5,6 +5,7 @@ import VueFormSelect    from './VueFormSelect/VueFormSelect.vue';
 import VueFormTabs      from './VueFormTabs/VueFormTabs.vue';
 import VueFormPlusMinus from './VueFormPlusMinus/VueFormPlusMinus.vue';
 import VueFormRange     from './VueFormRange/VueFormRange.vue';
+import VueFormFile      from './VueFormFile/VueFormFile.vue';
 import VueFormSubmit    from './VueFormSubmit/VueFormSubmit.vue';
 
 export
@@ -15,5 +16,6 @@ export
 	VueFormTabs,
 	VueFormPlusMinus,
 	VueFormRange,
+	VueFormFile,
 	VueFormSubmit,
 };

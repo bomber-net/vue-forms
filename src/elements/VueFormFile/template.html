@@ -1,0 +1,3 @@
+<label v-bind="labelBind" @drop.prevent.stop="drop" @dragover.prevent.stop>
+	<slot/><input type="file" v-bind="inputBind" @change.prevent.stop="drop">
+</label>
