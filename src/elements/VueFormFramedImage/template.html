@@ -1,0 +1,20 @@
+<div class="vue-form-framedimage-container" v-bind="$attrs">
+	<div class="vue-form-framedimage-imgcontainer">
+		<img v-if="src" :src="src" alt="" class="vue-form-framedimage-img">
+	</div>
+	<slot/>
+	<template v-if="!(readonly || disabled)">
+		<VueFormFile :accept="imageAccept" class="vue-form-framedimage-select" @select="select">
+			<slot name="file"/>
+		</VueFormFile>
+		<div v-if="src" class="vue-form-framedimage-delete" @click="src=null;$emit ('update:modelValue',null)"/>
+	</template>
+	<VuePopupEdit v-if="viewPopup" v-bind="$attrs" class="vue-form-framedimage-popup" @mousedown.left.exact.stop.capture.prevent="dragStart"
+		@mouseup.left.exact.stop.capture.prevent="dragEnd" @mouseleave="dragEnd" @mousemove="dragMove" @wheel="scale"
+		@close="viewPopup=false;popup={srcImg:null,imgDataURL:null,dragOn:false,top:0,left:0,scale:1}" @submit="submit">
+		<div v-if="popup.imgDataURL" class="vue-form-framedimage-popup-frame" :style="frameStyle">
+			<img :src="popup.imgDataURL" :style="imgStyle" alt="" class="vue-form-fremedimage-popup-img">
+			<div :style="maskStyle" class="vue-form-framedimage-popup-mask"/>
+		</div>
+	</VuePopupEdit>
+</div>

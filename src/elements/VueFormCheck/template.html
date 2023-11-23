@@ -1,0 +1,5 @@
+<div v-bind="$attrs" class="vue-form-check-container">
+	<input :checked="modelValue" :disabled="disabled||readonly" type="checkbox" @click="click" class="vue-form-check-checkbox">
+	<div v-if="$slots.default" v-bind="{disabled}" class="vue-form-slot"><slot/></div>
+	<div v-if="errorMessage" v-bind="errorBind" class="vue-form-error"/>
+</div>

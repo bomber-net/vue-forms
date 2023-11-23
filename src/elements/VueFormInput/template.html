@@ -1,0 +1,6 @@
+<div v-bind="$attrs" class="vue-form-input-container">
+	<div v-if="$slots.default" v-bind="{disabled}" class="vue-form-slot"><slot/></div>
+	<input v-if="isInput" v-bind="inputBind" v-on="on" class="vue-form-input-input">
+	<textarea v-else v-bind="inputBind" v-on="on"  class="vue-form-input-textarea"/>
+	<div v-if="errorMessage" v-bind="errorBind" class="vue-form-error"/>
+</div>

@@ -1,0 +1,18 @@
+<div class="vue-form-tags-container">
+	<div class="vue-form-tags-controls" @click="viewList=!viewList">
+		<div class="vue-form-tags-hint" v-text="hintText"/>
+		<div class="vue-form-tags-change" @click.stop.prevent="viewTags=!viewTags"/>
+	</div>
+	<div v-show="viewList" class="vue-form-tags-list">
+		<div v-for="(tag,id) in checkedTags" class="vue-form-tags-element">
+			<span v-text="tag" class="vue-form-tags-element-title"/>
+			<span class="vue-form-tags-element-delete" @click="uncheck (id)"/>
+		</div>
+	</div>
+	<VuePopupHost v-if="viewTags" @close="viewTags=false" class="vue-form-tags-popup">
+		<VueFormInput v-model="search" class="vue-form-tags-popup-search"/>
+		<div class="vue-form-tags-popup-list">
+			<div v-for="(tag,id) in filteredTags" v-text="tag" class="vue-form-tags-popup-tag" :class="{'vue-form-tags-popup-tag-checked':checked?.includes (id)}" @click="toggle (id)"/>
+		</div>
+	</VuePopupHost>
+</div>

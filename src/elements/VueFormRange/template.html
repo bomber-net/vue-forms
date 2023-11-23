@@ -1,0 +1,11 @@
+<div v-bind="$attrs" class="vue-form-range-container">
+	<div v-if="$slots.default" v-bind="{disabled}" class="vue-form-slot"><slot/></div>
+	<div class="vue-form-range-control">
+		<input :disabled="disabled||readonly" :type="rangeType" :value="modelValue?.from"
+			@input="$emit ('update:modelValue',Object.assign (modelValue??{},{from:$event.target.value}))"
+			class="vue-form-range-from">
+		<input :disabled="disabled||readonly" :type="rangeType" :value="modelValue?.to"
+			@input="$emit ('update:modelValue',Object.assign (modelValue??{},{to:$event.target.value}))"
+			class="vue-form-range-to">
+	</div>
+</div>

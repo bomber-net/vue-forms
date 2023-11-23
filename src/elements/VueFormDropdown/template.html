@@ -1,0 +1,8 @@
+<div class="vue-form-dropdown-container" ref="container">
+	<input type="text" v-model="search" :placeholder="dropdownHint" :disabled="disabled" class="vue-form-dropdown-input" @click="toggleSelect" @focus="focus" ref="input">
+	<div v-if="errorMessage" v-text="errorMessage" class="vue-form-error"/>
+	<div v-if="Object.keys (filteredOptions).length" class="vue-form-dropdown-select" ref="select">
+		<div v-for="(option,index) in filteredOptions" v-text="option" class="vue-form-dropdown-option"
+			:class="{'vue-form-dropdown-option-selected':isSelected (index)}" @click="select (index,$event)"/>
+	</div>
+</div>

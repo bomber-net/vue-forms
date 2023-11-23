@@ -1,0 +1,10 @@
+<VuePopupHost v-on="hostEvents" v-bind="$attrs">
+	<div v-if="errorMessage" v-text="errorMessage" class="vue-popup-edit-error"/>
+	<template v-if="!errorMessage" #default>
+		<slot/>
+	</template>
+	<template v-if="!errorMessage" #buttons>
+		<button type="submit" title="Save" class="vue-popup-edit-button-save"/>
+		<button type="reset" title="Cancel" class="vue-popup-edit-button-cancel"/>
+	</template>
+</VuePopupHost>

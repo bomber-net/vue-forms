@@ -1,0 +1,9 @@
+<div v-bind="$attrs" class="vue-form-plus-minus-container">
+	<div v-if="$slots.default" v-bind="{disabled}" class="vue-form-slot"><slot/></div>
+	<div class="vue-form-plus-minus-control">
+		<button :disabled="modelValue<=min" type="button" @click="update (modelValue-1)" class="vue-form-plus-minus-minus"/>
+		<input v-if="maxlength" :maxlength="maxlength" :value="modelValue" type="text" @input="update ($event.target.value)">
+		<input v-else :value="modelValue" type="text" @input="update ($event.target.value)">
+		<button :disabled="modelValue>=max" type="button" @click="update (modelValue+1)" class="vue-form-plus-minus-plus"/>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<div v-if="show" v-bind="$attrs" class="vue-form-select-container">
+	<div v-if="$slots.default" v-bind="{disabled}" class="vue-form-slot"><slot/></div>
+	<div class="vue-form-select-control">
+		<select v-bind="selectBind" v-on="on" class="vue-form-select-select">
+			<option v-if="selectHint" disabled value="unselected" v-text="selectHint" class="vue-form-select-option-hint"/>
+			<option v-for="[name,option] in orderedOptions" :value="`select_${name}`" v-text="option" class="vue-form-select-option"/>
+		</select>
+		<button v-if="![null,undefined].includes (modelValue) && canReset" type="reset"
+			@click.stop.prevent="$emit ('update:modelValue',null)" class="vue-form-select-reset"/>
+	</div>
+	<div v-if="errorMessage" v-bind="errorBind" class="vue-form-error"/>
+</div>

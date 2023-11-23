@@ -1,0 +1,37 @@
+.vue-form-tags-container
+{
+	.vue-form-tags-controls
+	{
+		display:flex;
+		flex-direction:row;
+		flex-wrap:nowrap;
+
+		.vue-form-tags-change
+		{
+			&, &:after
+			{
+				cursor:pointer;
+			}
+
+			&:after
+			{
+				content:'Change';
+			}
+		}
+	}
+
+	.vue-form-tags-list
+	{
+		.vue-form-tags-element
+		{
+			display:flex;
+			flex-direction:row;
+			flex-wrap:nowrap;
+
+			.vue-form-tags-element-delete
+			{
+				cursor:pointer;
+			}
+		}
+	}
+}

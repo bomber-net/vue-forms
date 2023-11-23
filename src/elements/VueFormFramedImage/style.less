@@ -1,0 +1,35 @@
+.vue-form-framedimage-container
+{
+	.vue-form-framedimage-imgcontainer
+	{
+		text-align:center;
+
+		.vue-form-framedimage-img
+		{
+			max-width:100%;
+			max-height:100%;
+		}
+	}
+}
+
+.vue-form-framedimage-popup
+{
+	width:fit-content;
+	height:fit-content;
+
+	.vue-form-framedimage-popup-frame
+	{
+		position:relative;
+		overflow:hidden;
+
+		& > *
+		{
+			position:absolute;
+
+			&.vue-form-framedimage-popup-mask
+			{
+				inset:0;
+			}
+		}
+	}
+}

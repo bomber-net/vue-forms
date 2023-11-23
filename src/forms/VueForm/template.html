@@ -1,0 +1,3 @@
+<form v-bind="$attrs" autocomplete="off" @submit.stop.prevent="submit" @reset.stop.prevent="$emit ('reset')" class="vue-form">
+	<slot/>
+</form>

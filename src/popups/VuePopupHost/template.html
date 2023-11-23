@@ -1,0 +1,20 @@
+<teleport to="body">
+	<div class="vue-popup-host-container">
+		<div v-if="splashClose" @click="formReset" class="vue-popup-host-splash"/>
+		<div v-else class="vue-popup-host-splash"/>
+		<VueForm v-bind="formBind" v-on="formEvents" class="vue-popup-host-form">
+			<div class="vue-popup-host-buttons vue-popup-host-buttons-before">
+				<button title="Close" type="reset" class="vue-popup-host-button-close"/>
+			</div>
+			<div class="vue-popup-host-client">
+				<div class="vue-popup-host-content">
+					<slot/>
+				</div>
+				<div v-if="$slots.buttons" class="vue-popup-host-buttons vue-popup-host-buttons-after">
+					<slot name="buttons"/>
+				</div>
+				<VueHelperPreloader v-if="!noPreloader && preloader"><slot name="preloader"/></VueHelperPreloader>
+			</div>
+		</VueForm>
+	</div>
+</teleport>

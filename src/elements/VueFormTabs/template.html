@@ -1,0 +1,4 @@
+<div v-bind="$attrs" class="vue-form-tabs-container">
+	<button v-for="(tab,id) in tabs" :disabled="id===modelValue" type="button" @click="$emit ('update:modelValue',id)"
+		v-text="tab" class="vue-form-tabs-element"/>
+</div>
